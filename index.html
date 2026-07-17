@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasnim Tabassum Simmi| Portfolio</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== SIDEBAR ===================== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="img/pic.three.jpeg" alt="logo" class="logo-img">
+    <p class="logo-text">Tasnim Tabassum Simmi</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="../index.html" class="nav-item active">Home</a>
+    <a href="./Leadership-Experience/L&E.html" class="nav-item">Leadership &amp; Experience</a>
+
+   <div class="nav-dropdown">
+  <!-- বাটনটিকে লিংক বানানো হলো এবং অ্যারো আইকনটিকে আলাদা ক্লিক করার সুবিধা দেওয়া হলো -->
+  <div class="nav-item dropdown-toggle-btn d-flex justify-content-between align-items-center">
+    <a href="./Achievements/achievements.html" style="color: inherit; flex-grow: 1;">Achievements</a>
+    <i class="bi bi-chevron-down" id="achievementsToggle" style="cursor: pointer; padding-left: 10px;"></i>
+  </div>
+  <div class="nav-dropdown-menu" id="achievementsMenu">
+
+    <!-- language এর জায়গায় সঠিক বানান languages.html করা হলো -->
+    <a href="./Achievements/language.html" class="nav-subitem">Languages</a>
+  </div>
+</div>
+  </nav>
+</aside>
+
+<!-- mobile toggler -->
+<button class="sidebar-mobile-btn" id="sidebarMobileBtn"><i class="bi bi-list"></i></button>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<main class="main-content">
+
+  <!-- ---------- HERO ---------- -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-text-wrap">
+        <h1 class="hero-title">Tasnim Tabassum Simmi</h1>
+        <div class="hero-underline"></div>
+        <p class="hero-subtitle">&bull; Law Student</p>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll"><i class="bi bi-chevron-down"></i></a>
+  </section>
+
+  <!-- ---------- ABOUT ME ---------- -->
+  <section id="about" class="px-5 about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-4 text-center">
+          <img src="img/pic-two.jpeg" alt="Sabrina" class="about-img">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="section-heading dark-heading">ABOUT ME</h2>
+          <p>Hello! I'm <strong>Tasnim Tabassum Simmi</strong>, an enthusiastic law student at the <strong>Department of Law and Justice, Southeast University</strong>.</p>
+          <p>I believe that law is not only a profession but also a responsibility to uphold justice and contribute positively to society. My academic journey has been complemented by active participation in leadership programs, volunteer initiatives, and community service.</p>
+          <p>I strive to become a legal professional who combines knowledge, ethics, and compassion to make a meaningful impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- EDUCATION ---------- -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+          <i class="bi bi-mortarboard-fill education-icon"></i>
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-heading cyan-heading">EDUCATION</h2>
+
+          <h4 class="edu-title">BACHELOR OF LAWS (LL.B)</h4>
+          <p class="edu-line"><strong>Southeast University</strong></p>
+          <p class="edu-line">Department of Law and Justice</p>
+          <p class="edu-line"><strong>Batch:</strong> 63</p>
+          <p class="edu-line mb-4"><strong>Current CGPA:</strong> 3.83</p>
+
+          <h4 class="edu-title">Higher Secondary Certificate (HSC)</h4>
+          <p class="edu-line"><strong>Narail Govt Victoria College </strong></p>
+          <p class="edu-line">2022</p>
+          <p class="edu-line mb-4"><strong>GPA:</strong> 5.00</p>
+
+          <h4 class="edu-title">Secondary School Certificate (SSC)</h4>
+          <p class="edu-line"><strong>Narail Govt Girls High School </strong></p>
+          <p class="edu-line">2020</p>
+          <p class="edu-line"><strong>GPA:</strong> 4.94</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- PROFESSIONAL PROFILE ---------- -->
+  <section id="leadership" class="px-5 profile-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center">
+         <i class="fa-solid fa-user-tie" style="font-size: 200px;"></i>
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-heading dark-heading">PROFESSIONAL PROFILE</h2>
+          <ul class="profile-list">
+            <li>Dedicated law student with excellent academic performance.</li>
+            <li>Strong leadership and organizational abilities.</li>
+            <li>Active volunteer committed to community service.</li>
+            <li>Excellent communication and presentation skills.</li>
+            <li>Experienced in cultural event management.</li>
+            <li>Professional Debator with extensive stage performance experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SKILLS ---------- -->
+  <section id="skills" class="px-5 skills-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-4 text-center">
+          <i class="fa-solid fa-user-graduate" style="font-size: 200px;"></i>
+        </div>
+        <div class="col-lg-4">
+          <h2 class="section-heading dark-heading text-center">SKILLS</h2>
+          <ul class="skills-list">
+            <li><i class="bi bi-award"></i> Legal Research</li>
+            <li><i class="bi bi-people-fill"></i> Leadership</li>
+            <li><i class="bi bi-mic-fill"></i> Public Speaking</li>
+            <li><i class="bi bi-heart-fill"></i> Teamwork</li>
+            <li><i class="bi bi-clipboard-check"></i> Event Management</li>
+            <li><i class="bi bi-chat-dots-fill"></i> Communication</li>
+            <li><i class="bi bi-heart-fill"></i> Community Service</li>
+            <li><i class="fa-solid fa-newspaper"></i> Child Journalist</li>
+            <li><i class="bi bi-mic"></i> Debator</li>
+            <li><i class="fa-solid fa-scale-balanced"></i>Mooter</li>
+            <li><i class="bi bi-clock-fill"></i> Time Management</li>
+            <li><i class="bi bi-journal-bookmark-fill"></i> Academic Research</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 text-center">
+          <i class="fa-solid fa-award" style="font-size: 200px;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ---------- ACHIEVEMENTS & CERTIFICATES ---------- -->
+  <section id="achievements" class="px-5 achievements-section" style="background-color: #f8f9fa; padding: 80px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-heading dark-heading text-uppercase" style="display:inline-block; border-bottom: 4px solid var(--green); padding-bottom: 10px;">Achievements &amp; Certificates</h2>
+          <p class="text-muted mt-2">A visual showcase of my academic accomplishments, training programs, and recognitions.</p>
+        </div>
+      </div>
+
+      <!-- Achievements Grid -->
+      <div class="row g-4">
+        
+        <!-- Certificate 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="certificate-card">
+            <div class="certificate-img-wrapper">
+              <img src="img/T C1.jpg" alt="Moot Court Championship" class="certificate-img">
+            </div>
+            <div class="certificate-body">
+              <div>
+                <h4 class="certificate-title">Certificate of Participation</h4>
+                <p class="certificate-issuer"><i class="bi bi-bank2 me-1"></i> Southeast University Law Society</p>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="certificate-card">
+            <div class="certificate-img-wrapper">
+              <img src="img/T C2.jpg" alt="National Debate Fest Participant" class="certificate-img">
+            </div>
+            <div class="certificate-body">
+              <div>
+                <h4 class="certificate-title">Certificate of Participation</h4>
+                <p class="certificate-issuer"><i class="bi bi-award me-1"></i> Southeast Model United Nations Club</p>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="certificate-card">
+            <div class="certificate-img-wrapper">
+              <img src="img/T C3.png" alt="Leadership & Advocacy Training" class="certificate-img">
+            </div>
+            <div class="certificate-body">
+              <div>
+                <h4 class="certificate-title">Certificate of Appreciation</h4>
+                <p class="certificate-issuer"><i class="bi bi-shield-check me-1"></i> Department of LAW</p>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Certificate 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="certificate-card">
+            <div class="certificate-img-wrapper">
+              <img src="img/PUNAB.jpg" alt="Leadership & Advocacy Training" class="certificate-img">
+            </div>
+            <div class="certificate-body">
+              <div>
+                <h4 class="certificate-title">APPRECIATION PARTNER</h4>
+                <p class="certificate-issuer"><i class="bi bi-shield-check me-1"></i> Southeast Model United Nations Club</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Certificate 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="certificate-card">
+            <div class="certificate-img-wrapper">
+              <img src="img/SEUDC.jpeg" alt="Leadership & Advocacy Training" class="certificate-img">
+            </div>
+            <div class="certificate-body">
+              <div>
+                <h4 class="certificate-title">SEUDC</h4>
+                <p class="certificate-issuer"><i class="bi bi-shield-check me-1"></i> Southeast University Debate Club</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ---------- CONTACT ---------- -->
+  <section id="contact" class="px-5 contact-section">
+    <div class="container">
+      <h2 class="section-heading dark-heading">CONTACT ME</h2>
+      <p><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +880 1930 776861</p>
+      <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> 
+        <a href="mailto:2025020300006@seu.edu.bd">2025020300006@seu.edu.bd</a></p>
+      <p><i class="bi bi-geo-alt-fill"></i> <strong>Location:</strong> Dhaka, Bangladesh</p>
+
+      <div class="contact-social">
+        <img src="img/pic.three.jpeg" alt="social" class="social-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="footer-name">Tasnim Tabassum Simmi</p>
+      <p class="footer-copy">&copy; 2026 Tasnim Tabassum Simmi. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>

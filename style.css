@@ -1,0 +1,471 @@
+/* ===================== ROOT / GLOBAL ===================== */
+:root{
+  --green: #1a9455;
+  --green-dark: #157a45;
+  --teal-dark: #1f4a48;
+  --cyan: #4fd8e8;
+  --sidebar-width: 240px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+   overflow-x: hidden; /* ডানে-বামে স্ক্রল বন্ধ করবে */
+    width: 100%;
+}
+
+
+
+a{
+  text-decoration: none;
+}
+
+/* ===================== SIDEBAR ===================== */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 24px 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-logo{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-img{
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.logo-text{
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.sidebar-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item{
+  display: block;
+  padding: 10px 12px;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-item.active{
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.nav-item:hover{
+  background: #f0f0f0;
+  color: #111;
+}
+
+.nav-item.active:hover{
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.dropdown-toggle-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-dropdown-menu{
+  display: none;
+  flex-direction: column;
+  padding-left: 14px;
+}
+
+.nav-dropdown-menu.show{
+  display: flex;
+}
+
+.nav-subitem{
+  padding: 8px 10px;
+  color: #555;
+  font-size: 0.88rem;
+}
+
+.nav-subitem:hover{
+  color: var(--green);
+}
+
+.sidebar-mobile-btn{
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1100;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+.main-content{
+  margin-left: var(--sidebar-width);
+}
+
+.section-heading{
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.dark-heading{
+  color: #1a1a1a;
+}
+
+.cyan-heading{
+  color: var(--cyan);
+}
+
+/* ===================== HERO ===================== */
+
+
+.hero-section {
+    /* 1. Background image short-hand tike aro safe kora holo (center/cover shortcut soriye alada dewa holo) */
+    background-image: linear-gradient(180deg, rgba(230,190,180,0.35), rgba(230,190,180,0.35)), 
+    url('img/pic.three.jpeg');
+    
+    /* 2. Shob browser e jate fixed scroll perfect kaj kore tar jonne scroll behavior rules */
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    
+    /* 3. Layout and alignment */
+    min-height: 100vh; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-search-btn{
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+}
+
+.hero-text-wrap{
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title{
+  font-weight: 800;
+  font-size: 3rem;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-underline{
+  width: 260px;
+  height: 6px;
+  background: var(--green);
+  margin: 0 auto 24px;
+}
+
+.hero-subtitle{
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.hero-scroll{
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%, 100%{ transform: translate(-50%, 0); }
+  50%{ transform: translate(-50%, 8px); }
+}
+
+/* ===================== ABOUT ===================== */
+.about-section{
+  background: var(--green);
+  color: #fff;
+  padding: 80px 0;
+}
+
+.about-section .section-heading{
+  color: #1a1a1a;
+}
+
+.about-section p strong{
+  color: #0d2e1c;
+}
+
+.about-img{
+  width: 100%;
+  max-width: 380px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+/* ===================== EDUCATION ===================== */
+.education-section {
+    /* Path thik korar jonne '../' add kora hoyeche, css folder theke ber hoye img folder-e jabe */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/Education.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 0; /* padding 90px rakha holo */
+    color: var(--cyan); /* Text er default color */
+}
+
+/* Duibar thaka class-ti ekhane merge kore dewa hoyeche, ja background image k muche phelbe na */
+.education-icon {
+    font-size: 14rem;
+    color: rgba(79, 216, 232, 0.15);
+}
+
+.edu-title {
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.edu-line {
+    color: var(--cyan);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+/* ===================== PROFESSIONAL PROFILE ===================== */
+.profile-section{
+  background: var(--green);
+  padding: 80px 0;
+}
+
+.profile-section .section-heading{
+  color: #1a1a1a;
+}
+
+.profile-img{
+  width: 100%;
+  max-width: 460px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.profile-list{
+  list-style: square;
+  padding-left: 20px;
+  color: #0d2e1c;
+}
+
+.profile-list li{
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+/* ===================== SKILLS ===================== */
+.skills-section{
+  background: #f2f2f2;
+  padding: 80px 0;
+}
+
+.skills-img{
+  width: 100%;
+  max-width: 380px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.skills-list{
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li{
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.skills-list li i{
+  color: var(--green);
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+
+/* ===================== ACHIEVEMENTS SECTION ===================== */
+.certificate-card {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.certificate-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px; /* সার্টিফিকেটের জন্য নির্দিষ্ট উচ্চতা */
+  overflow: hidden;
+  border-bottom: 3px solid var(--green);
+}
+
+.certificate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ইমেজ দিয়ে পুরো বক্স ফিলাপ হবে */
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-img {
+  transform: scale(1.05);
+}
+
+.certificate-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.certificate-issuer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.certificate-date {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* ===================== CONTACT ===================== */
+.contact-section{
+  background: #fff;
+  padding: 90px 0 60px;
+}
+
+.contact-section p{
+  font-size: 1.02rem;
+  margin-bottom: 14px;
+}
+
+.contact-section i{
+  color: var(--green);
+  margin-right: 8px;
+}
+
+.social-img{
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.contact-social img{
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+/* ===================== FOOTER ===================== */
+.site-footer{
+  background: var(--green);
+  padding: 30px 0;
+  color: #0d2e1c;
+}
+
+.footer-name{
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.footer-copy{
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991px){
+  .sidebar{
+    transform: translateX(-100%);
+  }
+  .sidebar.show{
+    transform: translateX(0);
+  }
+  .main-content{
+    margin-left: 0;
+  }
+  .sidebar-mobile-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-title{
+    font-size: 2rem;
+  }
+  .hero-underline{
+    width: 180px;
+  }
+}
