@@ -1,0 +1,352 @@
+/* ===================== ROOT / GLOBAL (From style.css) ===================== */
+:root {
+  --green: #1a9455;
+  --green-dark: #157a45;
+  --teal-dark: #1f4a48;
+  --cyan: #4fd8e8;
+  --sidebar-width: 240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===================== SIDEBAR DESIGN (From style.css) ===================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  padding: 24px 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.logo-text {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: block;
+  padding: 10px 12px;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.nav-item:hover {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.nav-item.active:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.dropdown-toggle-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 14px;
+}
+
+.nav-dropdown-menu.show {
+  display: flex;
+}
+
+.nav-subitem {
+  padding: 8px 10px;
+  color: #555;
+  font-size: 0.88rem;
+  display: block;
+  border-radius: 4px;
+}
+
+/* সাব-মেনু একটিভ হলে ব্যাকগ্রাউন্ড কালো এবং লেখা সাদা হবে */
+.nav-subitem.active {
+  background-color: #111111; /* আপনার থিমের কালো শেডটি এখানে দিতে পারেন */
+  color: #ffffff !important;
+  border-radius: 4px; /* কোনা একটু গোল করার জন্য (ঐচ্ছিক) */
+  display: block;
+  padding: 8px 12px;
+}
+
+.nav-subitem:hover, .nav-subitem.active {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.sidebar-mobile-btn {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1100;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+}
+
+/* ===================== MAIN CONTENT LAYOUT ===================== */
+.main-content {
+  margin-left: var(--sidebar-width);
+}
+
+.hero-search-btn {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.section-heading {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.dark-heading {
+  color: #1a1a1a;
+}
+
+/* ===================== ACHIEVEMENTS & LANGUAGES HEADER ===================== */
+.achievements-section {
+  padding: 80px 0 0;
+  background: #fff;
+}
+
+
+
+.achievements-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.achievements-underline {
+  width: 480px;
+  height: 12px;
+  background: var(--green);
+  margin: 0 auto 50px;
+}
+
+/* Achievements List Container (Green Block) */
+.achievements-box {
+  background: var(--green);
+  padding: 40px 0;
+  text-align: left;
+}
+
+.achievements-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 max(20px, 12%);
+}
+
+.achievements-items li {
+  font-size: 1.15rem;
+  color: #000;
+  font-weight: 500;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.achievements-items li:last-child {
+  border-bottom: none;
+}
+
+/* ===================== LANGUAGES SPECIFIC DESIGN ===================== */
+.languages-content-box {
+  max-width: 900px;
+  padding: 20px max(20px, 12%);
+  margin-bottom: 60px;
+  
+  
+}
+
+.language-block {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.lang-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.lang-proficiency {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* ===================== CONTACT SECTION (From style.css) ===================== */
+.contact-section {
+  background: #fff;
+  padding: 90px 0 60px;
+}
+
+.contact-section .container {
+  padding-left: max(20px, 12%);
+}
+
+.contact-section p {
+  font-size: 1.02rem;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.contact-section i {
+  color: var(--green);
+  margin-right: 8px;
+}
+
+.contact-section a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.social-img {
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.contact-social img{
+  height: 55px;
+  width: 55px;
+    border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===================== FOOTER (From style.css) ===================== */
+.site-footer {
+  background: var(--green);
+  padding: 40px 0;
+  color: #0d2e1c;
+  position: relative;
+}
+
+.site-footer .container {
+  padding-left: max(20px, 12%);
+  text-align: left;
+}
+
+.footer-name {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Info Icon placement at bottom left like screenshot */
+.footer-info-icon {
+  font-size: 1.1rem;
+  color: #0d2e1c;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ===================== RESPONSIVE MEDIA QUERIES ===================== */
+@media (max-width: 991px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidebar-mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .achievements-title {
+    font-size: 2.2rem;
+  }
+  .achievements-underline {
+    width: 240px;
+    height: 8px;
+  }
+  .achievements-items, .languages-content-box, .contact-section .container, .site-footer .container {
+    margin: 0 20px;
+    padding-left: 0;
+  }
+  .site-footer .container {
+    text-align: center;
+  }
+}
